@@ -1,0 +1,28 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Next.js: debug server",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "Local:\\s+(https?://.+)",
+        "uriFormat": "%s"
+      }
+    },
+    {
+      "name": "Smoke SOAP (RUT 76528588)",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/smoke-soap.mjs",
+      "args": ["76528588"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ]
+}
